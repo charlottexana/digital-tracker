@@ -1,54 +1,41 @@
-.btn-ghost {
-  color: white;
-  border: 1px solid white;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+  background-color: #374252;
 }
 
-.btn-ghost:hover {
-  opacity: 1;
-}
-
-.btn-flat {
+.banner h1 {
+  margin: 0;
   color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: #99BAB8;
-  transition: background 0.3s ease;
-}
-
-.btn-flat:hover {
-  background: #1BCB7F;
-  color: white;
-}
-
-.btn-dark {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: #374252;
-  transition: background 0.3s ease;
-}
-
-.btn-dark:hover {
-  background: #374252;
-  color: white;
-}
-
-.btn-gradient {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
   font-weight: bold;
-  background: linear-gradient(#167FFB, #0F60C4);
-  transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
 }
 
-.btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
+.banner p {
+  font-size: 20px;
   color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+// .banner-flex {
+//   display: flex;
+//   // justify-content: space-between;
+//   flex-grow: 150;
+// }
+
+@media(max-width: 2500px) {
+.banner-flex {
+  display: flex;
+  justify-content: space-between;
+}
+}
+
+@media(max-width: 1000px) {
+.banner-flex {
+  display: flex;
+  flex-direction: column;
+}
 }
