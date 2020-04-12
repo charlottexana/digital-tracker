@@ -15,6 +15,14 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+//= require rails-ujs
+//= require turbolinks
+//= require_tree
+
+// require 'uri'
+// require 'net/http'
+// require 'openssl'
+
 console.log('Hello World from Webpacker')
 
 import 'bootstrap';
@@ -25,6 +33,8 @@ document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initUpdateNavbarOnScroll();
 });
+
+
 
 document.addEventListener('DOMContentLoaded', function(){
 
