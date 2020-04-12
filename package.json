@@ -1,0 +1,15 @@
+{
+  "name": "digital-tracker",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "5.0.1",
+    "bootstrap": "^4.4.1",
+    "core-js": "^3.6.5",
+    "jquery": "^3.5.0",
+    "popper.js": "^1.16.1",
+    "regenerator-runtime": "^0.13.5"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.10.3"
+  }
+}
