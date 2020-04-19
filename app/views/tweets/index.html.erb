@@ -1,5 +1,16 @@
-<ul class='tweets'>
-  <% @tweets.each do |tweet| %>
-    <li><%= tweet.text %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <h1>Social Dashboard</h1>
+    <ul class='tweets'>
+      <li>Twitter Handle:<%= @followers.name %></li>
+      <li>Titter Description:<%= @followers.description %></li>
+      <li>Number of Followers as of <%= DateTime.now %><%= @followers.followers_count %></li>
+      <li>Posts Uploaded:<%= @followers.statuses_count %></li>
+    </ul>
+
+  <h2>Last 5 Tweets:</h2>
+    <ul class='tweets'>
+      <% @tweets.each do |tweet| %>
+        <li><%= tweet.text %></li>
+      <% end %>
+  </ul>
+</div>
