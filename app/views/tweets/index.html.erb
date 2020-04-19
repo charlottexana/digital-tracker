@@ -7,6 +7,8 @@
     <div class="card-product-infos">
       <h2>Twitter Profile Metrics:</h2>
       <p>Twitter Handle:<%= @followers.name %></p>
+
+       image_tag ("# {@followers.profile_image_url_https}")
       <p>Titter Description:<%= @followers.description %></p>
       <p>Number of Followers as of <%= DateTime.now %><%= @followers.followers_count %></p>
       <p>Posts Uploaded:<%= @followers.statuses_count %></p>
