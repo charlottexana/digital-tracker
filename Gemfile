@@ -7,6 +7,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 gem 'webpacker', '~> 5.x'
+gem 'twitter'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

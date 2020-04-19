@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :homes, only: [:index, :show]
   resources :keywords, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  resources :tweets, only: [:index]
 
   root to: 'pages#home'
   # get '/search' => 'keyword#search'
