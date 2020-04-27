@@ -7,11 +7,10 @@
     <div class="card-product-infos">
       <h2>Twitter Profile Metrics:</h2>
       <p>Twitter Handle:<%= @followers.name %></p>
-
-       image_tag ("# {@followers.profile_image_url_https}")
+      <p>image_tag ("# {@followers.profile_image_url_https}")</p>
       <p>Titter Description:<%= @followers.description %></p>
-      <p>Number of Followers as of <%= DateTime.now %><%= @followers.followers_count %></p>
-      <p>Posts Uploaded:<%= @followers.statuses_count %></p>
+      <p>Number of Followers as of <h5><%= DateTime.now.strftime('%A %e %B %Y at %I:%M: %p') %></h5></strong> <h4><%= @followers.followers_count %></h4></p>
+      <p>Posts Uploaded:<h4><%= @followers.statuses_count %></h4></p>
       <ol id="tweets"></ol>
     </div>
       <a class="card-button btn btn-flat" href="https://www.google.com/search?q=landlord+lifeguard&oq=landlord+life&aqs=chrome.0.0j69i57j69i59j0l2j69i60l3.5106j0j7&sourceid=chrome&ie=UTF-8">View Live Account</a>
@@ -21,11 +20,11 @@
   <i class="far fa-life-ring fa-4x"></i>
     <div class="card-product-infos">
       <h2>Last 5 Tweets:</h2>
-        <p class='tweets'>
+        <ol class='tweets'>
           <% @tweets.each do |tweet| %>
-            <p><%= tweet.text %></p>
+            <li><%= tweet.text %></li>
           <% end %>
-      </p>
+      </ol>
     </div>
       <a class="card-button btn btn-flat" href="https://www.google.com/search?q=landlord+lifeguard&oq=landlord+life&aqs=chrome.0.0j69i57j69i59j0l2j69i60l3.5106j0j7&sourceid=chrome&ie=UTF-8">View Live Search</a>
 </div>
