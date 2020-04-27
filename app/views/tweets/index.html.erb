@@ -7,13 +7,12 @@
     <div class="card-product-infos">
       <h2>Twitter Profile Metrics as of <%= DateTime.now.strftime('%A %e %B %Y') %></h2>
         <p>Twitter Handle: <strong><%= @followers.name %></strong></p>
-        <p>image_tag ("# {@followers.profile_image_url_https}")</p>
         <p>Twitter Description: <strong><%= @followers.description %></strong></p>
         <p>Posts Uploaded: <strong><%= @followers.statuses_count %></strong></p>
         <p>Number of Followers: </p>
         <strong><%= @followers.followers_count %></strong>
     </div>
-      <a class="card-button btn btn-flat" href="https://www.google.com/search?q=landlord+lifeguard&oq=landlord+life&aqs=chrome.0.0j69i57j69i59j0l2j69i60l3.5106j0j7&sourceid=chrome&ie=UTF-8">View Live Account</a>
+      <img src="http://pbs.twimg.com/profile_banners/1168473279520301056/1573568191/web">
 </div>
 
 <div class="card-product">
@@ -22,9 +21,9 @@
       <h2>5 Latest Tweets as of <%= DateTime.now.strftime('%A %e %B %Y') %></h2>
         <ol class='tweets'>
           <% @tweets.each do |tweet| %>
-            <li><%= tweet.text %></li>
-          <% end %>
-      </ol>
+          <li><%= tweet.text %></li>
+            <% end %>
+        </ol>
     </div>
       <a class="card-button btn btn-flat" href="https://www.google.com/search?q=landlord+lifeguard&oq=landlord+life&aqs=chrome.0.0j69i57j69i59j0l2j69i60l3.5106j0j7&sourceid=chrome&ie=UTF-8">View Live Search</a>
 </div>
