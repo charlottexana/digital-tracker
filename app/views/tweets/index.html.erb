@@ -3,23 +3,23 @@
 </div>
 
 <div class="card-product">
-  <i class="fas fa-life-ring fa-4x"></i>
+  <i class="fas fa-hashtag fa-4x"></i>
     <div class="card-product-infos">
-      <h2>Twitter Profile Metrics:</h2>
-      <p>Twitter Handle:<%= @followers.name %></p>
-      <p>image_tag ("# {@followers.profile_image_url_https}")</p>
-      <p>Titter Description:<%= @followers.description %></p>
-      <p>Number of Followers as of <h5><%= DateTime.now.strftime('%A %e %B %Y at %I:%M: %p') %></h5></strong> <h4><%= @followers.followers_count %></h4></p>
-      <p>Posts Uploaded:<h4><%= @followers.statuses_count %></h4></p>
-      <ol id="tweets"></ol>
+      <h2>Twitter Profile Metrics as of <%= DateTime.now.strftime('%A %e %B %Y') %></h2>
+        <p>Twitter Handle: <strong><%= @followers.name %></strong></p>
+        <p>image_tag ("# {@followers.profile_image_url_https}")</p>
+        <p>Twitter Description: <strong><%= @followers.description %></strong></p>
+        <p>Posts Uploaded: <strong><%= @followers.statuses_count %></strong></p>
+        <p>Number of Followers: </p>
+        <strong><%= @followers.followers_count %></strong>
     </div>
       <a class="card-button btn btn-flat" href="https://www.google.com/search?q=landlord+lifeguard&oq=landlord+life&aqs=chrome.0.0j69i57j69i59j0l2j69i60l3.5106j0j7&sourceid=chrome&ie=UTF-8">View Live Account</a>
 </div>
 
 <div class="card-product">
-  <i class="far fa-life-ring fa-4x"></i>
+  <i class="fab fa-twitter-square fa-4x"></i>
     <div class="card-product-infos">
-      <h2>Last 5 Tweets:</h2>
+      <h2>5 Latest Tweets as of <%= DateTime.now.strftime('%A %e %B %Y') %></h2>
         <ol class='tweets'>
           <% @tweets.each do |tweet| %>
             <li><%= tweet.text %></li>
