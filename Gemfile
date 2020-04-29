@@ -9,6 +9,7 @@ gem 'simple_form'
 gem 'webpacker', '~> 5.x'
 gem 'twitter'
 gem 'dotenv-rails'
+gem 'google-api-client', '~> 0.11', require: 'google/apis/analyticsreporting_v4'
 # Add if need: , groups: [:development, :test]
 
 
