@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function(){
           if (position.url.includes("landlordlifeguard.co.uk")) {
             serp.textContent = ("Your position is " + position.position + " You are in the top 100 for this term!");
           } else {
-            serp.textContent = ("Your position is " + position.position + " You are not in the top 100 - more SEO work is needed.");
+            serp.textContent = (" You are not in the top 100 - more SEO work is needed.");
           };
         }));
       });
