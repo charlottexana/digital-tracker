@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function(){
   const serp = document.querySelector('#serp');
+
+    if(serp) {
+
     fetch('https://app.zenserp.com/api/v2/search?apikey=700c9fe0-74fd-11ea-826c-03f7ed395182&q=landlord advice&device=desktop&gl=GB&hl=en&location=United Kingdom&num=20')
       .then(response => response.json())
       .then((data) => {
@@ -11,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function(){
           };
         }));
       });
+
+    };
 });
 
 
