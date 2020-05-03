@@ -27,5 +27,4 @@ document.addEventListener('turbolinks:load', () => {
 
 import '../components/desktopresults';
 import '../components/mobileresults';
-
-import { getSerpResult } from '../components/serps';
+import '../components/serps';
