@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
 const myKeyword = document.querySelector('#keywords');
 
+if (myKeyword) {
+
 fetch('https://app.zenserp.com/api/v2/search?apikey=700c9fe0-74fd-11ea-826c-03f7ed395182&q=landlord%20lifeguard&device=desktop&gl=GB&hl=en&location=United%20Kingdom')
   .then(response => response.json())
   .then((data) => {
@@ -16,4 +18,6 @@ fetch('https://app.zenserp.com/api/v2/search?apikey=700c9fe0-74fd-11ea-826c-03f7
       }
 ;}
   );
+
+};
 });
