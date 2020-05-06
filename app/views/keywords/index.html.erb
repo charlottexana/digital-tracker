@@ -2,9 +2,9 @@
   <h1>Organic Dashboard</h1>
 </div>
 
-<% @keywords.each do |keyword| %>
-<%= keyword.name %>
-<% end %>
+<ol><% @keywords.each do |keyword| %>
+<li><%= keyword.name %>: <%= keyword.position %></li>
+<% end %></ol>
 
 <div class="card-product">
   <i class="far fa-life-ring fa-4x"></i>
