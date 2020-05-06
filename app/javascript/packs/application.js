@@ -28,3 +28,4 @@ document.addEventListener('turbolinks:load', () => {
 import '../components/desktopresults';
 import '../components/mobileresults';
 import '../components/serps';
+import '../components/groupserp.js';
