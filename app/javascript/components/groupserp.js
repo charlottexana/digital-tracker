@@ -1,31 +1,28 @@
-const headers = {
-  'apikey': '700c9fe0-74fd-11ea-826c-03f7ed395182',
-  'content-type': 'application/json'
-};
+// const options = {
+//   "url": 'https://app.zenserp.com/api/v2/batches/',
+//   'apikey': '700c9fe0-74fd-11ea-826c-03f7ed395182',
+//   'content-type': 'application/json',
+//   "webhook_url": "http://localhost:3000/keywords",
+//   "jobs": [
+//         {
+//             "q": "landlord lifeguard",
+//         },
 
-const options = {
-  "url": 'https://app.zenserp.com/api/v2/batches/',
-  "webhook_url": "http://localhost:3000/keywords",
-  "jobs": [
-        {
-            "q": "landlord lifeguard",
-        },
+//         {
+//             "keyword": [
+//               "landlord lifeguard",
+//               "landlord advice",
+//               "landlord help",
+//               "tenant referencing",
+//               "should i sell my rental property"
+//               ],
 
-        {
-            "keyword": [
-              "landlord lifeguard",
-              "landlord advice",
-              "landlord help",
-              "tenant referencing",
-              "should i sell my rental property"
-              ],
+//               "type": "search"
+//         }
+//       ]
+// };
 
-              "type": "search"
-        }
-      ]
-};
-
-console.log(options.jobs[1]["keyword"][3]);
+// console.log(options.jobs[1]["keyword"][3]);
 
 // batchSerp = (options.jobs[1]["keyword"].forEach("keyword" => {
 //   debugger
