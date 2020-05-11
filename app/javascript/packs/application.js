@@ -13,9 +13,6 @@
 // require 'uri'
 // require 'net/http'
 // require 'openssl'
-
-console.log('Hello World from Webpacker')
-
 import 'bootstrap';
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
@@ -28,4 +25,3 @@ document.addEventListener('turbolinks:load', () => {
 import '../components/desktopresults';
 import '../components/mobileresults';
 import '../components/serps';
-import '../components/groupserp.js';
