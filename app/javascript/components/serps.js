@@ -11,10 +11,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
       Promise.all(promises)
       .then((results) => {
-
         results.forEach((data, index) => {
           console.log("current url", fetches[index]);
-
           const newPosition = (data.organic.forEach(position => {
             if (position.url.includes("landlordlifeguard.co.uk")) {
               console.log("Your position is " + position.position);
@@ -25,9 +23,6 @@ document.addEventListener('DOMContentLoaded', function(){
             };
           }));
         });
-
       });
-
-
     };
 });
