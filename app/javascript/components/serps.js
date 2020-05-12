@@ -3,13 +3,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
     if(serp) {
 
-    const fetches = ["https://app.zenserp.com/api/v2/search?apikey=700c9fe0-74fd-11ea-826c-03f7ed395182&q=landlord%20advice&device=desktop&gl=GB&hl=en&location=United%20Kingdom&num=20", "https://app.zenserp.com/api/v2/search?apikey=700c9fe0-74fd-11ea-826c-03f7ed395182&q=should%20i%20sell%20my%20rental%20property&device=desktop&gl=GB&hl=en&location=United%20Kingdom&num=50"];
+    const fetches = ["https://app.zenserp.com/api/v2/search?apikey=700c9fe0-74fd-11ea-826c-03f7ed395182&q=landlord%20lifeguard&device=desktop&gl=GB&hl=en&location=United%20Kingdom&num=10",
+    "https://app.zenserp.com/api/v2/search?apikey=700c9fe0-74fd-11ea-826c-03f7ed395182&q=landlord%20advice&device=desktop&gl=GB&hl=en&location=United%20Kingdom&num=20",
+    "https://app.zenserp.com/api/v2/search?apikey=700c9fe0-74fd-11ea-826c-03f7ed395182&q=should%20i%20sell%20my%20rental%20property&device=desktop&gl=GB&hl=en&location=United%20Kingdom&start=10&num=20",
+    "https://app.zenserp.com/api/v2/search?apikey=700c9fe0-74fd-11ea-826c-03f7ed395182&q=what%20is%20tenant%20referencing&device=desktop&gl=GB&hl=en&location=United%20Kingdom&start=10&num=20"];
     const promises = fetches.map(url => fetch(url).then(response => response.json()));
-    // fetch('https://app.zenserp.com/api/v2/search?apikey=700c9fe0-74fd-11ea-826c-03f7ed395182&q=landlord advice&device=desktop&gl=GB&hl=en&location=United Kingdom&num=20')
 
       Promise.all(promises)
-      // .then(response => response.json())
       .then((results) => {
+
         results.forEach((data, index) => {
           console.log("current url", fetches[index]);
 
@@ -22,8 +24,10 @@ document.addEventListener('DOMContentLoaded', function(){
               console.log("You are not in the top 100 - more SEO work is needed.");
             };
           }));
+        });
 
-        })
       });
+
+
     };
 });

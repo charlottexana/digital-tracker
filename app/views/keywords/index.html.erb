@@ -2,9 +2,6 @@
   <h1>Organic Dashboard</h1>
 </div>
 
-<ol><% @keywords.each do |keyword| %>
-<li><%= keyword.name %>: <%= keyword.position %></li>
-<% end %></ol>
 
 <div class="card-product">
   <i class="far fa-life-ring fa-4x"></i>
@@ -17,3 +14,7 @@
       <a class="card-button btn btn-flat" href="https://www.google.com/search?q=landlord+lifeguard&oq=landlord+life&aqs=chrome.0.0j69i57j69i59j0l2j69i60l3.5106j0j7&sourceid=chrome&ie=UTF-8">View Live Search</a>
 </div>
 
+
+<ol><% @keywords.each do |keyword| %>
+<li><%= keyword.name %>: <%= keyword.position %></li>
+<% end %></ol>
