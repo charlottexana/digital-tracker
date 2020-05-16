@@ -17,7 +17,13 @@ document.addEventListener('DOMContentLoaded', function(){
             if (position.url.includes("landlordlifeguard.co.uk")) {
               console.log("You are in the top 100 for this term!");
               serp.textContent = ("Your position is " + position.position + ". You are in the top 100 for this term!");
-              return("Your position is " + position.position + "You are in the top 100 for this term!");
+              // return("Your position is " + position.position + "You are in the top 100 for this term!");
+            // for (let i = 0; i < newPosition.length; i++) {
+            //   const title = newPosition[i];
+            //   const li = document.createElement('li');
+            //   li.appendChild(document.createTextNode(title ));
+            //   myKeyword.appendChild(li);
+            // }
             };
           }));
         });
