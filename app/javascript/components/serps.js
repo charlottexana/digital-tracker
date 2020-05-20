@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function(){
           const query = (data.query.q);
           const newPosition = (data.organic.forEach(rank => {
             if (rank.url.includes("landlordlifeguard.co.uk")) {
-              const text = rank.title + ": " + rank.position;
+              const text = query + ":" + rank.position;
               const li = document.createElement('li');
               li.appendChild(document.createTextNode(text));
               serp.appendChild(li);
