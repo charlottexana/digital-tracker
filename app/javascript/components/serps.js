@@ -8,23 +8,19 @@ document.addEventListener('DOMContentLoaded', function(){
     "https://app.zenserp.com/api/v2/search?apikey=700c9fe0-74fd-11ea-826c-03f7ed395182&q=should%20i%20sell%20my%20rental%20property&device=desktop&gl=GB&hl=en&location=United%20Kingdom&start=10&num=20",
     "https://app.zenserp.com/api/v2/search?apikey=700c9fe0-74fd-11ea-826c-03f7ed395182&q=what%20is%20tenant%20referencing&device=desktop&gl=GB&hl=en&location=United%20Kingdom&start=10&num=20"];
     const promises = fetches.map(url => fetch(url).then(response => response.json()));
-
       Promise.all(promises)
       .then((results) => {
         results.forEach((data, index) => {
           console.log("current url", fetches[index]);
-          const newPosition = (data.organic.forEach(position => {
-            if (position.url.includes("landlordlifeguard.co.uk")) {
-              console.log("You are in the top 100 for this term!");
-              serp.textContent = ("Your position is " + position.position + ". You are in the top 100 for this term!");
-              // return("Your position is " + position.position + "You are in the top 100 for this term!");
-            // for (let i = 0; i < newPosition.length; i++) {
-            //   const title = newPosition[i];
-            //   const li = document.createElement('li');
-            //   li.appendChild(document.createTextNode(title ));
-            //   myKeyword.appendChild(li);
-            // }
-            };
+          console.log("query", data.query.q);
+          const query = (data.query.q);
+          const newPosition = (data.organic.forEach(rank => {
+            if (rank.url.includes("landlordlifeguard.co.uk")) {
+              const text = rank.title + ": " + rank.position;
+              const li = document.createElement('li');
+              li.appendChild(document.createTextNode(text));
+              serp.appendChild(li);
+            }
           }));
         });
       });
