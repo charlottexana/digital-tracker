@@ -26,13 +26,16 @@ document.addEventListener('DOMContentLoaded', function(){
           console.log("current url", fetches[index]);
           console.log("query", data.query.q);
           const query = (data.query.q);
+          const li = document.createElement('li');
+          li.appendChild(document.createTextNode(query));
+          serp.appendChild(li);
           const newPosition = (data.organic.forEach(rank => {
             if (rank.url.includes("landlordlifeguard.co.uk")) {
-              const text = query + ":" + rank.position;
+              const text = query + ": " + rank.position;
               const li = document.createElement('li');
               li.appendChild(document.createTextNode(text));
               serp.appendChild(li);
-            }
+            };
           }));
         });
       });
