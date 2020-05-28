@@ -1,0 +1,9 @@
+2020-05-28 18:40:27.579 BST [56673] LOG:  starting PostgreSQL 12.3 on x86_64-apple-darwin18.7.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.17), 64-bit
+2020-05-28 18:40:27.581 BST [56673] LOG:  listening on IPv6 address "::1", port 5432
+2020-05-28 18:40:27.581 BST [56673] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-05-28 18:40:27.582 BST [56673] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2020-05-28 18:40:27.594 BST [56674] LOG:  database system was shut down at 2020-05-28 18:40:19 BST
+2020-05-28 18:40:27.598 BST [56673] LOG:  database system is ready to accept connections
+2020-05-28 18:40:57.757 BST [56824] FATAL:  database "db/digital-tracker" does not exist
+2020-05-28 18:41:05.336 BST [56879] ERROR:  database "db/digital-tracker" already exists
+2020-05-28 18:41:05.336 BST [56879] STATEMENT:  CREATE DATABASE "db/digital-tracker" ENCODING = 'utf8'
