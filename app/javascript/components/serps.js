@@ -31,20 +31,22 @@ document.addEventListener('DOMContentLoaded', function(){
           li.appendChild(document.createTextNode(query));
           serp.appendChild(li);
 
-          const newPosition = (data.organic.filter(rank => {
-            if (rank.url === ("landlordlifeguard.co.uk"))
-              (console.log("organicrank", newPosition));
-          }));
-
-
-          // const newPosition = (data.organic.forEach(rank => {
-          //   if (rank.url.includes("landlordlifeguard.co.uk")) {
-          //     const text = query + ": " + rank.position;
-          //     const li = document.createElement('li');
-          //     li.appendChild(document.createTextNode(text));
-          //     serp.appendChild(li);
-          //   };
+          // const newPosition = (data.organic.filter(rank => {
+          //   if (rank.url === ("landlordlifeguard.co.uk"))
+          //     (console.log("organicrank", newPosition));
           // }));
+
+
+          const newPosition = (data.organic.forEach(rank => {
+            if (rank.url.includes("landlordlifeguard.co.uk")) {
+            console.log(newPosition);
+              const text = query + ": " + rank.position;
+              const li = document.createElement('li');
+              li.appendChild(document.createTextNode(text));
+              serp.appendChild(li);
+
+            };
+          }));
         });
       });
     };
