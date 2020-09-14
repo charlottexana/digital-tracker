@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :keywords, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   resources :tweets, only: [:index]
   resources :brands, only: [:index]
+  resources :google_analytics, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 
   root to: 'pages#home'
   # get '/search' => 'keyword#search'
